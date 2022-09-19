@@ -17,7 +17,11 @@ pipeline {
         
         stage('Show system date'){
             steps{
-               echo "TimeStamp: ${Util.getTimeSpanString(System.currentTimeMillis())}"
+               script {
+                    DATE_TAG = java.time.LocalDate.now()
+                    DATETIME_TAG = java.time.LocalDateTime.now()
+                }
+                sh "echo ${DATETIME_TAG}"
             }
         } 
    }
