@@ -17,10 +17,10 @@ pipeline {
         
         stage('Show system date'){
             steps{
-                Date date = new Date()
-                String datePart = date.format("dd/MM/yyyy")
-                String timePart = date.format("HH:mm:ss")
-                println "datePart : " + datePart + "\ttimePart : " + timePart
+               script {
+                    def now = new Date()
+                    println now.format("yyMMdd.HHmm", TimeZone.getTimeZone('UTC'))
+                }
             }
         }
     
