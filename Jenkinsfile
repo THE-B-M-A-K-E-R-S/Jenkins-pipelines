@@ -22,8 +22,6 @@ pipeline {
                     println now.format("yyMMdd.HHmm", TimeZone.getTimeZone('UTC'))
                 }
             }
-        }
-    
-    
-    
+        } 
+   }
 }
