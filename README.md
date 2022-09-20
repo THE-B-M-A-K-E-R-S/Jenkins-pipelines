@@ -3,4 +3,5 @@
 # Start jenkins 
 > vagrant up
 > vagrant ssh
-> vagrant
+> vagrant halt
+> vagrant destroy
