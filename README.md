@@ -2,3 +2,4 @@
 
 # Start jenkins 
 > vagrant up
+> 
