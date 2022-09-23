@@ -15,7 +15,7 @@ pipeline {
             }
         }
         
-        stage('Show system date... '){
+        stage('Show system date.....'){
             steps{
                script {
                     DATE_TAG = java.time.LocalDate.now()
