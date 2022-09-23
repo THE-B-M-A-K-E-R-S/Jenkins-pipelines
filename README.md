@@ -5,4 +5,3 @@
 > vagrant ssh
 > vagrant halt
 > vagrant destroy
-> vagrant status
