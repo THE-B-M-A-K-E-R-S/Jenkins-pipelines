@@ -11,7 +11,7 @@ pipeline {
         
         stage('MVN CLEAN'){
             steps {
-                sh "MVN CLEAN"
+                sh """MVN CLEAN"""
             }
         }
         
