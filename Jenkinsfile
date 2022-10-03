@@ -9,9 +9,9 @@ pipeline {
             }
         }
         
-        stage('Testing maven...'){
+        stage('MVN CLEAN'){
             steps {
-                sh """mvn -versinon"""
+                sh "MVN CLEAN"
             }
         }
         
