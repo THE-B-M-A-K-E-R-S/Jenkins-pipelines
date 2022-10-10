@@ -9,11 +9,17 @@ pipeline {
             }
         }
         
-        stage('Testing maven...'){
+         stage('Testing maven...'){
             steps {
                 sh """mvn -versinon"""
             }
         }
+        
+//         stage('MVN CLEAN'){
+//             steps {
+//                 sh """MVN CLEAN"""
+//             }
+//         }
         
         stage('Show system date..'){
             steps{
