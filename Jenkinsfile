@@ -1,6 +1,6 @@
 pipeline {
     agent any
-    
+
     stages {
         stage('Pulling from git...'){
             steps{
@@ -8,19 +8,19 @@ pipeline {
                 url : 'https://github.com/THE-B-M-A-K-E-R-S/Jenkins-pipelines'
             }
         }
-        
-         stage('Testing maven...'){
-            steps {
-                sh """mvn -versinon"""
-            }
-        }
-        
+
+//          stage('Testing maven...'){
+//             steps {
+//                 sh """mvn -versinon"""
+//             }
+//         }
+
 //         stage('MVN CLEAN'){
 //             steps {
 //                 sh """MVN CLEAN"""
 //             }
 //         }
-        
+
         stage('Show system date..'){
             steps{
                script {
@@ -29,6 +29,6 @@ pipeline {
                 }
                 sh "echo ${DATETIME_TAG}"
             }
-        } 
+        }
    }
 }
