@@ -74,7 +74,28 @@
                     <artifactId>sonar-maven-plugin</artifactId>
                     <version>3.9.1.2184</version>
                 </plugin>
+                <plugin>
+                    <groupId>org.sonatype.plugins</groupId>
+                    <artifactId>nexus-staging-maven-plugin</artifactId>
+                    <version>1.5.1</version>
+                    <executions>
+                        <execution>
+                            <id>achat
+                                -deploy</id>
+                            <phase>deploy</phase>
+                            <goals>
+                                <goal>deploy</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                    <configuration>
+                        <serverId>AchatRepo</serverId>
+                        <nexusUrl>http://localhost:8081/nexus/</nexusUrl>
+                        <skipStaging>true</skipStaging>
+                    </configuration>
+                </plugin>
             </plugins>
+
         </pluginManagement>
         <plugins>
             <plugin>
