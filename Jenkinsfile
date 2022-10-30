@@ -35,16 +35,16 @@ pipeline {
                     [
                         artifactId: 'achat',
                         classifier: '',
-                        file: 'target/achat',
+                        file: 'target/achat-1.0.0.jar',
                         type: 'jar'
                     ]
                 ],
                  credentialsId: 'nexus3',
                  groupId: 'tn.esprit.rh',
                  nexusUrl: 'localhost:8081',
-                 nexusVersion: 'nexus2',
+                 nexusVersion: 'nexus3',
                  protocol: 'http',
-                 repository: 'http://localhost:8081/repository/Achat-release/',
+                 repository: 'Achat-release',
                  version: '1.0.0'
             }
         }
