@@ -9,17 +9,25 @@ pipeline {
             }
         }
 
+         stage('Running the unit test...'){
+                    steps{
+                        sh 'mvn test'
+                    }
+                }
 
-        stage('MVN CLEAN...'){
-            steps {
-                sh """mvn clean"""
+        stage('Building the project...'){
+            steps{
+                sh 'mvn clean install'
+            }
+        }
+        stage('Deploying the project...'){
+            steps{
+                sh 'mvn deploy'
             }
         }
 
-//         stage('MVN COMPILE'){
-//             steps {
-//                 sh """MVN COMPILE"""
-//             }
-//         }
+
+
+
    }
 }
