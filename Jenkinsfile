@@ -16,14 +16,6 @@ pipeline {
             }
         }
 
-//         stage('Show system date..'){
-//             steps{
-//                script {
-//                     DATE_TAG = java.time.LocalDate.now()
-//                     DATETIME_TAG = java.time.LocalDateTime.now()
-//                 }
-//                 sh "echo ${DATETIME_TAG}"
-//             }
-//         }
+
    }
 }
