@@ -9,26 +9,21 @@ pipeline {
             }
         }
 
-         stage('Testing maven...'){
+
+        stage('MVN CLEAN'){
             steps {
-                sh """mvn -versinon"""
+                sh """MVN CLEAN"""
             }
         }
 
-//         stage('MVN CLEAN'){
-//             steps {
-//                 sh """MVN CLEAN"""
+//         stage('Show system date..'){
+//             steps{
+//                script {
+//                     DATE_TAG = java.time.LocalDate.now()
+//                     DATETIME_TAG = java.time.LocalDateTime.now()
+//                 }
+//                 sh "echo ${DATETIME_TAG}"
 //             }
 //         }
-
-        stage('Show system date..'){
-            steps{
-               script {
-                    DATE_TAG = java.time.LocalDate.now()
-                    DATETIME_TAG = java.time.LocalDateTime.now()
-                }
-                sh "echo ${DATETIME_TAG}"
-            }
-        }
    }
 }
