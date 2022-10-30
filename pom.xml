@@ -82,9 +82,6 @@
 
     <build>
         <finalName>Achat</finalName>
-        <defaultGoal>deploy</defaultGoal>
-        <!-- Source directory configuration -->
-        <sourceDirectory>src</sourceDirectory>
         <pluginManagement>
             <plugins>
                 <plugin>
