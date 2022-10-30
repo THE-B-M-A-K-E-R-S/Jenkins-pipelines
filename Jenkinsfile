@@ -15,6 +15,11 @@ pipeline {
             }
         }
 
+        stage("Build") {
+            steps {
+                sh 'mvn clean package'
+            }
+        }
 
         stage('Sonar analysis...'){
             steps{
@@ -23,11 +28,6 @@ pipeline {
                 }
             }
         }
-
-
-
-
-
 
    }
 }
