@@ -69,12 +69,12 @@
         <repository>
             <id>releases</id>
             <name>Achat-release</name>
-            <url>http://localhost:8081/repository/maven-releases/</url>
+            <url>http://192.168.1.5:8081/repository/maven-releases/</url>
         </repository>
         <snapshotRepository>
             <id>snapshots</id>
             <name>Achat-snapshots</name>
-            <url>http://localhost:8081/repository/maven-snapshots/</url>
+            <url>http://192.168.1.5:8081/repository/maven-snapshots/</url>
         </snapshotRepository>
     </distributionManagement>
 
@@ -82,6 +82,9 @@
 
     <build>
         <finalName>Achat</finalName>
+        <defaultGoal>deploy</defaultGoal>
+        <!-- Source directory configuration -->
+        <sourceDirectory>src</sourceDirectory>
         <pluginManagement>
             <plugins>
                 <plugin>
