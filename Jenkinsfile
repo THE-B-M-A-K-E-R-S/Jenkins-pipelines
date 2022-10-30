@@ -16,10 +16,10 @@ pipeline {
             }
         }
 
-        stage('MVN COMPILE'){
-            steps {
-                sh """MVN COMPILE"""
-            }
-        }
+//         stage('MVN COMPILE'){
+//             steps {
+//                 sh """MVN COMPILE"""
+//             }
+//         }
    }
 }
