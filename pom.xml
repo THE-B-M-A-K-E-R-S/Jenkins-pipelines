@@ -82,7 +82,7 @@
 
 
     <build>
-        <finalName>Achat</finalName>
+        <finalName>achat</finalName>
         <pluginManagement>
             <plugins>
                 <plugin>
