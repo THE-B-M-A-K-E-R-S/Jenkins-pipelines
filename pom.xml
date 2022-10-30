@@ -65,7 +65,7 @@
 
     </dependencies>
 
-    // distribution management
+
     <distributionManagement>
         <repository>
             <id>releases</id>
