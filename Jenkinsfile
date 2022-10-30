@@ -21,13 +21,12 @@ pipeline {
             }
         }
 
-        stage('Sonar analysis...'){
-            steps{
-                withSonarQubeEnv('sonarqube'){
-                    sh 'mvn sonar:sonar'
-                }
-            }
-        }
+        stage("SonarQube Analysis") {
+                    agent any
+                    steps {
+                      sh 'mvn sonar:sonar'
+                    }
+                  }
 
    }
 }
