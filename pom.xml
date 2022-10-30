@@ -69,12 +69,12 @@
     <distributionManagement>
         <repository>
             <id>releases</id>
-            <name>releases</name>
+            <name>Achat-release</name>
             <url>http://localhost:8081/repository/maven-releases/</url>
         </repository>
         <snapshotRepository>
             <id>snapshots</id>
-            <name>snapshots</name>
+            <name>Achat-snapshots</name>
             <url>http://localhost:8081/repository/maven-snapshots/</url>
         </snapshotRepository>
     </distributionManagement>
