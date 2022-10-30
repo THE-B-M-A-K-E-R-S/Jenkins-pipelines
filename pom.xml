@@ -11,6 +11,7 @@
     <groupId>tn.esprit.rh</groupId>
     <artifactId>achat</artifactId>
     <name>achat</name>
+    <version>1.0.0</version>
     <description>Projet pour le module DevOps</description>
     <properties>
         <java.version>1.8</java.version>
