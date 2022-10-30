@@ -9,22 +9,13 @@ pipeline {
             }
         }
 
-         stage('Running the unit test...'){
-                    steps{
-                        sh 'mvn test'
-                    }
-                }
+        stage('Running the unit test...'){
+            steps{
+                sh 'mvn test'
+            }
+        }
 
-        stage('Building the project...'){
-            steps{
-                sh 'mvn clean install'
-            }
-        }
-        stage('Deploying the project...'){
-            steps{
-                sh 'mvn deploy'
-            }
-        }
+
 
 
 
