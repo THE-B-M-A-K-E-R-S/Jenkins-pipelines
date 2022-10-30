@@ -16,6 +16,10 @@ pipeline {
             }
         }
 
-
+        stage('MVN COMPILE'){
+            steps {
+                sh """MVN COMPILE"""
+            }
+        }
    }
 }
