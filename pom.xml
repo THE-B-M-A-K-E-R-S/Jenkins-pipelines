@@ -96,8 +96,7 @@
                     <version>1.5.1</version>
                     <executions>
                         <execution>
-                            <id>achat
-                                -deploy</id>
+                            <id>AchatRepo</id>
                             <phase>deploy</phase>
                             <goals>
                                 <goal>deploy</goal>
