@@ -15,7 +15,7 @@ pipeline {
         }
         stage("Build") {
             steps {
-                sh 'mvn clean install -DskipTest=false'
+                sh 'mvn clean install -DskipTests=false'
             }
         }
         stage("SonarQube Analysis") {
