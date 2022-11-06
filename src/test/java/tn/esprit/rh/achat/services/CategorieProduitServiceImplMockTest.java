@@ -34,15 +34,50 @@ class CategorieProduitServiceImplMockTest {
         categorieProduits.add(categorieProduit);
         categorieProduits.add(new CategorieProduit(2L, "Test2", "Lib2", null));
     }
+
     List<CategorieProduit> categorieProduits = new ArrayList<>();
 
 
-
-
     @Test
-    void findById() {
+    void retrieveCategorieProduit() {
         Mockito.when(categorieProduitRepository.findById(Mockito.anyLong())).thenReturn(Optional.of(categorieProduit));
         CategorieProduit cp = cps.retrieveCategorieProduit(1L);
         Assertions.assertNotNull(cp);
+    }
+
+    @Test
+    void retrieveAllCategorieProduits() {
+        Assertions.assertNotNull(cps.retrieveAllCategorieProduits());
+    }
+
+    @Test
+    void addCategorieProduit() {
+        Mockito.when(categorieProduitRepository.save(Mockito.any(CategorieProduit.class))).thenReturn(categorieProduit);
+        cps.addCategorieProduit(categorieProduit);
+        Mockito.when(categorieProduitRepository.findById(Mockito.anyLong())).thenReturn(Optional.of(categorieProduit));
+        CategorieProduit cp = cps.retrieveCategorieProduit(1L);
+        Assertions.assertEquals(cp.getIdCategorieProduit(), categorieProduit.getIdCategorieProduit());
+        Assertions.assertEquals(cp.getLibelleCategorie(), categorieProduit.getLibelleCategorie());
+        Assertions.assertEquals(cp.getCodeCategorie(), categorieProduit.getCodeCategorie());
+    }
+
+    @Test
+    void updateCategorieProduit() {
+        Mockito.when(categorieProduitRepository.save(Mockito.any(CategorieProduit.class))).thenReturn(categorieProduit);
+        cps.addCategorieProduit(categorieProduit);
+        Mockito.when(categorieProduitRepository.findById(Mockito.anyLong())).thenReturn(Optional.of(categorieProduit));
+        CategorieProduit cp = cps.retrieveCategorieProduit(1L);
+        Assertions.assertEquals(cp.getIdCategorieProduit(), categorieProduit.getIdCategorieProduit());
+        Assertions.assertEquals(cp.getLibelleCategorie(), categorieProduit.getLibelleCategorie());
+        Assertions.assertEquals(cp.getCodeCategorie(), categorieProduit.getCodeCategorie());
+    }
+
+    @Test
+    void deleteCategorieProduit() {
+        long id=42;
+
+        cps.deleteCategorieProduit(id);
+
+        Mockito.verify(categorieProduitRepository, Mockito.times(1)).deleteById(id);
     }
 }
