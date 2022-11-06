@@ -19,7 +19,7 @@ import java.util.Optional;
 
 @SpringBootTest
 @ExtendWith(MockitoExtension.class)
-public class CategorieProduitServiceImplMock {
+class CategorieProduitServiceImplMockTest {
 
     @Autowired
     ICategorieProduitService cps;
