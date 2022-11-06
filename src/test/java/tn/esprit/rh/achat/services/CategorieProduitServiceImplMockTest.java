@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.InjectMocks;
 import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 import org.mockito.junit.jupiter.MockitoExtension;
@@ -21,8 +22,8 @@ import java.util.Optional;
 @ExtendWith(MockitoExtension.class)
 class CategorieProduitServiceImplMockTest {
 
-    @Autowired
-    ICategorieProduitService cps;
+    @InjectMocks
+    CategorieProduitServiceImpl cps;
     CategorieProduitRepository categorieProduitRepository = Mockito.mock(CategorieProduitRepository.class);
 
     CategorieProduit categorieProduit;
@@ -39,7 +40,7 @@ class CategorieProduitServiceImplMockTest {
 
 
     @Test
-    void test() {
+    void findById() {
         Mockito.when(categorieProduitRepository.findById(Mockito.anyLong())).thenReturn(Optional.of(categorieProduit));
         CategorieProduit cp = cps.retrieveCategorieProduit(1L);
         Assertions.assertNotNull(cp);
