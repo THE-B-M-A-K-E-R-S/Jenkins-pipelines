@@ -48,10 +48,4 @@ pipeline {
                }
         }
    }
-
-   post {
-       always {
-           unit(testResults: 'target/surefire-reports/*.xml', allowEmptyResults : true)
-       }
-   }
 }
