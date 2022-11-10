@@ -42,6 +42,17 @@ pipeline {
                  version: '1.0.0'
             }
         }
+   }
+   stage("Email"){
+              steps{
+                  emailext attachLog: true, body: "${env.BUILD_URL} has result ${currentBuild.result}", compressLog: true, subject: "Status of pipeline: ${currentBuild.fullDisplayName}", to: 'bassem.jadoui@esprit.tn'
+              }
+       }
 
+       }
+       post {
+           always {
+               junit(testResults: 'target/surefire-reports/*.xml', allowEmptyResults : true)
+           }
    }
 }
