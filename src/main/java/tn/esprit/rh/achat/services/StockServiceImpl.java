@@ -80,7 +80,6 @@ public class StockServiceImpl implements IStockService {
 					+ newLine;
 
 		}
-		log.info(finalMessage);
 		return finalMessage;
 	}
 
