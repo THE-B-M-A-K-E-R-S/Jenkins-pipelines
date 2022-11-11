@@ -27,10 +27,10 @@ services:
             - '8081:8081'
         volumes:
             - 'nexus_data:/nexus-data'
-    spring:
-        image: bmakes/spring
-        ports:
-            - '8089:8089'
+    # spring:
+    #     image: bmakes/spring
+    #     ports:
+    #         - '8089:8089'
 
 volumes:
     SonarQube_data:
